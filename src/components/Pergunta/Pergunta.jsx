@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Pergunta.cs"
+import "./Pergunta.css"
 
 export default function Pergunta({ titulo, pergunta }){
     const [estado, setEstado] = useState("fechada");
