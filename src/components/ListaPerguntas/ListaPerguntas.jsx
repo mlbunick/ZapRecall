@@ -1,19 +1,28 @@
 import Pergunta from "../Pergunta/Pergunta";
-import "./ListaPerguntas.css"
+import styled from 'styled-components';
 
 const dados = [
   { titulo: 'Pergunta 1', pergunta: 'O que é JSX?' },
   { titulo: 'Pergunta 2', pergunta: 'Como funciona o useState?' },
   { titulo: 'Pergunta 3', pergunta: 'O que é um componente React?' },
-  { titulo: 'Pergunta 4', pergunta: 'Comno exporto um componente?'}
+  { titulo: 'Pergunta 4', pergunta: 'Como exporto um componente?' }
 ];
 
 export default function ListaPerguntas() {
   return (
-    <div>
+    <ListaPerguntasContainer>
       {dados.map((item, index) => (
         <Pergunta key={index} titulo={item.titulo} pergunta={item.pergunta} />
       ))}
-    </div>
+    </ListaPerguntasContainer>
   );
 }
+
+const ListaPerguntasContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* Espaçamento entre perguntas */
+  padding: 20px;
+`;

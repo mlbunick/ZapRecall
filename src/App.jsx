@@ -1,12 +1,11 @@
-import { useState } from 'react'
 import './App.css'
 import ListaPerguntas from './components/ListaPerguntas/ListaPerguntas';
+import ZapRecallIcone from './assets/logo_completa.png';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
+    <div className="content">
+       <img src={ZapRecallIcone} alt="Ícone ZapRecall" style={{ display: 'block', margin: '0 auto 20px' }} />
       <ListaPerguntas />
     </div>
   );
