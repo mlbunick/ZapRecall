@@ -126,6 +126,11 @@ const PerguntaContainer = styled.div`
       : "12px"};
   box-sizing: border-box;
 
+  @media (max-width: 348px) {
+    width: 100%;
+    font-size: 14px;
+  }
+
   ${(props) =>
     props.estado === "resposta"
       ? css`
@@ -218,15 +223,21 @@ const Resposta = styled.div`
 
 const ImagemRespostaContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding-top: 3rem;
+  align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  padding-top: 1.5rem;
 `;
 
 const Imagem = styled.img`
-  width: 85.17px;
-  height: 37.17px;
+  width: 85px;
+  height: 37px;
   border-radius: 5px;
   object-fit: contain;
+  flex-shrink: 0;
+
+  @media (max-width: 348px) {
+    width: 18vw;
+  }
 `;
