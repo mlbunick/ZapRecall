@@ -1,12 +1,47 @@
-# React + Vite
+# ⚡ ZapRecall
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo de flashcards feito com React + Vite para testar sua memória e turbinar seus estudos!
 
-Currently, two official plugins are available:
+## 📚 Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O **ZapRecall** é um app de flashcards onde você tenta se lembrar das respostas antes de revelá-las. Cada flashcard contém uma pergunta e, após revelá-la, você escolhe se:
 
-## Expanding the ESLint configuration
+- ❌ Não lembrou (erro)
+- ⚠️ Quase não lembrou (quase)
+- ⚡ Lembrou de primeira (zap!)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Com isso, o app te ajuda a identificar quais conteúdos você já domina e quais precisa revisar.
+
+---
+
+## 🧩 Funcionalidades
+
+- Renderização dinâmica dos flashcards a partir de um array de objetos
+- Flashcards interativos com estados:
+  - Fechado
+  - Aberto (com a pergunta)
+  - Resposta (com botões de avaliação)
+  - Respondido (com estilo e ícone específicos)
+- Contador de progresso no rodapé
+- Design responsivo para dispositivos mobile
+- Estilização com `styled-components`
+- Feito com Vite + React
+  
+---
+
+## 🚀 Tecnologias e ferramentas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [styled-components](https://styled-components.com/)
+- [Vercel (Deploy)](https://vercel.com/)
+
+---
+
+## 🔧 Como rodar o projeto localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/mlbunick/zaprecall.git
+cd zaprecall
