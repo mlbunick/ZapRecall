@@ -9,7 +9,7 @@ import icon_certo from "../../assets/icone_certo.png";
 import icon_quase from "../../assets/icone_quase.png";
 import icon_erro from "../../assets/icone_erro.png";
 
-export default function Pergunta({ titulo, pergunta, resposta }) {
+export default function Pergunta({ titulo, pergunta, resposta, registrarResposta}) {
   const [estado, setEstado] = useState("fechada");
 
   function abrirPergunta() {
@@ -22,6 +22,7 @@ export default function Pergunta({ titulo, pergunta, resposta }) {
 
   function responder(responseType) {
     setEstado(`fechada-${responseType}`);
+    registrarResposta();
   }
 
   function getIconForState(estado) {
@@ -236,6 +237,8 @@ const Imagem = styled.img`
   border-radius: 5px;
   object-fit: contain;
   flex-shrink: 0;
+  cursor: pointer;
+
 
   @media (max-width: 348px) {
     width: 18vw;

@@ -2,33 +2,27 @@ import Pergunta from "../Pergunta/Pergunta";
 import styled from 'styled-components';
 
 const perguntas = [
-  { 
-    titulo: 'Pergunta 1', 
-    pergunta: 'O que é JSX?', 
-    resposta: 'JSX é uma sintaxe que permite usar HTML dentro do JavaScript.' 
-  },
-  { 
-    titulo: 'Pergunta 2', 
-    pergunta: 'Como funciona o useState?', 
-    resposta: 'useState cria um estado e uma função para atualizá-lo em componentes funcionais.' 
-  },
-  { 
-    titulo: 'Pergunta 3', 
-    pergunta: 'O que é um componente React?', 
-    resposta: 'É uma função ou classe que retorna UI em JSX.' 
-  },
-  { 
-    titulo: 'Pergunta 4', 
-    pergunta: 'Como exporto um componente?', 
-    resposta: 'Usamos "export default NomeDoComponente".' 
-  }
+  { titulo: 'Pergunta 1', pergunta: 'O que é JSX?', resposta: 'Uma extensão de linguagem do JavaScript.' },
+  { titulo: 'Pergunta 2', pergunta: 'O que é o React?', resposta: 'Uma biblioteca JavaScript para construção de interfaces.' },
+  { titulo: 'Pergunta 3', pergunta: 'Por que componentes devem iniciar com letra maiúscula?', resposta: 'Porque o React distingue componentes de elementos HTML dessa forma.' },
+  { titulo: 'Pergunta 4', pergunta: 'O que podemos colocar dentro do JSX?', resposta: 'Expressões JavaScript.' },
+  { titulo: 'Pergunta 5', pergunta: 'Como o ReactDOM nos ajuda?', resposta: 'Interagindo com a DOM para colocar componentes React na mesma.' },
+  { titulo: 'Pergunta 6', pergunta: 'Para que usamos o npm?', resposta: 'Para gerenciar os pacotes necessários e suas dependências.' },
+  { titulo: 'Pergunta 7', pergunta: 'Para que usamos props?', resposta: 'Para passar diferentes informações para componentes.' },
+  { titulo: 'Pergunta 8', pergunta: 'Para que usamos estado (state)?', resposta: 'Para dizer ao React quais informações, quando atualizadas, devem renderizar a tela novamente.' }
 ];
 
-export default function ListaPerguntas() {
+export default function ListaPerguntas({ registrarResposta }) {
   return (
     <ListaPerguntasContainer>
       {perguntas.map((item, index) => (
-        <Pergunta key={index} titulo={item.titulo} pergunta={item.pergunta} resposta={item.resposta} />
+        <Pergunta
+          key={index}
+          titulo={item.titulo}
+          pergunta={item.pergunta}
+          resposta={item.resposta}
+          registrarResposta={registrarResposta}
+        />
       ))}
     </ListaPerguntasContainer>
   );
