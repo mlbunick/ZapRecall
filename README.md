@@ -34,7 +34,7 @@ Com isso, o app te ajuda a identificar quais conteúdos você já domina e quais
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [styled-components](https://styled-components.com/)
-- [Vercel (Deploy)](https://vercel.com/)
+- [Vercel (Deploy)](https://zap-recall-black.vercel.app/)
 
 ---
 
